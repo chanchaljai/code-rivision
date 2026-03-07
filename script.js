@@ -1,39 +1,28 @@
-let form = document.querySelector("form");
-let inputs = document.querySelectorAll("input");
-let main = document.querySelector(".main")
-let btn = document.querySelector("#submit");
+let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
-btn.addEventListener("click", function(dets){
-    dets.preventDefault();
+function showNotes(){
+let list = document.getElementById("notesList");
+list.innerHTML="";
 
-   
-
-    let card = document.createElement("div");
-    card.classList.add("card");
-
-    let profile = document.createElement("div");
-    profile.classList.add("profile");
-
-    let img = document.createElement("img");
-    img.setAttribute("src", inputs[0].value);
-
-    let h3 = document.createElement("h3");
-    h3.textContent = inputs[1].value;
-
-    let h5 = document.createElement("h5");
-    h5.textContent = inputs[2].value;
-
-     let p = document.createElement("p");
-    p.textContent = inputs[3].value;
-
-    profile.appendChild(img);
-    card.appendChild(profile);
-    card.appendChild(h3);
-    card.appendChild(h5);
-    card.appendChild(p);
-    main.appendChild(card);
-
-    form.reset();
+notes.forEach(function(note){
+let li=document.createElement("li");
+li.textContent=note;
+list.appendChild(li);
 });
+}
 
+function addNote(){
 
+let input=document.getElementById("noteInput");
+let note=input.value;
+
+notes.push(note);
+
+localStorage.setItem("notes",JSON.stringify(notes));
+
+input.value="";
+
+showNotes();
+}
+
+showNotes();

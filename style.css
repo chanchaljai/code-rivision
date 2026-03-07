@@ -1,59 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+font-family: Arial;
+text-align: center;
 }
 
- body {
-    width: 100%;
-    height: 100%;
-
+input{
+padding:8px;
+width:200px;
 }
 
-input {
-    display: block;
-    background-color: #e4dedeb0;
-   
-}
-.main {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-   
+button{
+padding:8px;
 }
 
-.card {
-   max-width: 300px;
-    padding: 20px;
-    border: 2px solid #222;
-    display: inline-block;
-    margin-top: 30px;
-    background-color: rgb(208, 208, 248);
-   
-}
-
-.profile {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.profile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-}
-
-
-
-.card h5 {
-      margin-top: 2px;
-    }
-    .card h3 {
-      margin-top: 10px;
-    }
-    .card p {
-    font-size: 12px;
+li{
+margin:10px;
+list-style:none;
+background:#f2f2f2;
+padding:8px;
 }
