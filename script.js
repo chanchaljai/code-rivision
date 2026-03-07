@@ -33,7 +33,7 @@ btn.addEventListener("click", function(dets){
     card.appendChild(p);
     main.appendChild(card);
 
-    
+    form.reset();
 });
 
 
