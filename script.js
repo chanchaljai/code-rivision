@@ -6,6 +6,8 @@ let btn = document.querySelector("#submit");
 btn.addEventListener("click", function(dets){
     dets.preventDefault();
 
+   
+
     let card = document.createElement("div");
     card.classList.add("card");
 
@@ -31,7 +33,7 @@ btn.addEventListener("click", function(dets){
     card.appendChild(p);
     main.appendChild(card);
 
-    form.reset();
+    
 });
 
 
